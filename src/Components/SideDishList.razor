@@ -1,0 +1,142 @@
+﻿@using QuickKitchen.WebSite.Models
+@using QuickKitchen.WebSite.Services
+@using Microsoft.AspNetCore.Components.Web
+@inject JsonFileProductService ProductService
+<div class="row row-cols-3 g-3">
+    @foreach (var product in ProductService.GetAllData().Where(x => x.Category == "Side"))
+    {
+        <div class="card">
+            <a href = "/Recipes/Read/@product.Id">
+            <div class="card-img" style="background-image: url('@product.Image');">
+            </div>
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">@product.Title</h5>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">
+                    <button id="MoreInfoButton_@product.Id" @onclick="(e => SelectProduct(product.Id))"
+                            data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                        More Info
+                    </button>
+                </small>
+            </div>
+        </div>
+    }
+
+</div>
+
+@if (selectedProduct != null)
+
+///This code block is an if statement that checks if the selectedProduct variable is not null.
+///If it is not null, it will display a Bootstrap modal that shows details about the selected product.
+///The modal includes an image, description, and a star rating system for users to vote on the product.
+///The vote count and current average rating are also displayed. The SubmitRating method is called when a user clicks on a star to submit their rating,
+///and the GetCurrentRating method is called to update the current rating and vote count after each rating is submitted.
+{
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productTitle">@selectedProduct.Title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-card">
+                        <a href = "/Recipes/Read/@selectedProduct.Id">
+                        <div class="card-img" style="background-image: url('@selectedProduct.Image');">
+                        </div>
+                        </a>
+                        <div class="modal-card-body">
+                            <p class="card-text">@selectedProduct.Description</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a class="btn footer-btn btn-primary" href="./Recipes/Read/@selectedProduct.Id">See Recipe</a>
+                    <div class="votes">
+                        @if (voteCount == 0)
+                        {
+                            <span>Be the first to vote!</span>
+                        }
+                        else
+                        {
+                            <span>@voteCount @voteLabel</span>
+                        }
+                        @for (int i = 1; i < 6; i++)
+                        {
+                            var currentStar = i;
+                            if (i <= currentRating)
+                            {
+                                <span class="fa fa-star checked" @onclick="(e => SubmitRating(currentStar))"></span>
+                            }
+                            else
+                            {
+                                <span class="fa fa-star" @onclick="(e => SubmitRating(currentStar))"></span>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+}
+
+<link rel="stylesheet" href="../wwwroot/css/site.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+@code {
+    ProductModel selectedProduct;
+    string selectedProductId;
+
+    /// <summary>
+    ///  a method called SelectProduct that takes a string parameter productId.
+    ///  It sets the selectedProductId field to the passed in productId and retrieves the corresponding ProductModel from the ProductService
+    ///   using the GetProducts method
+    /// </summary>
+    /// <param name="productId">sets the selectedProductId field to the passed in productId and retrieves the corresponding ProductModel</param>
+    void SelectProduct(string productId)
+    {
+        selectedProductId = productId;
+        selectedProduct = ProductService.GetAllData().First(x => x.Id == productId);
+        GetCurrentRating();
+    }
+
+
+    // variable that will hold the rating that the given recipe has, will be calculated below
+    int currentRating = 0;
+
+    // sum of all the ratings/votes given for the recipe to be the divisor in calculating currentRating
+    int voteCount = 0;
+
+    // will either be "Vote" or "Votes" depending on if there is 1, 0, or multiple votes
+    string voteLabel;
+
+    @*method named "GetCurrentRating" that calculates the current rating of the selected product based on its ratings*@
+    void GetCurrentRating()
+    {
+        if (selectedProduct.Ratings == null)
+        {
+            currentRating = 0;
+            voteCount = 0;
+        }
+        else
+        {
+            voteCount = selectedProduct.Ratings.Count();
+            voteLabel = voteCount > 1 ? "Votes" : "Vote";
+            currentRating = selectedProduct.Ratings.Sum() / voteCount;
+        }
+
+        System.Console.WriteLine($"Current rating for {selectedProduct.Id}: {currentRating}");
+    }
+
+    @*method called SubmitRating that takes an integer rating as its input parameter. *@
+    void SubmitRating(int rating)
+    {
+
+        System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
+        ProductService.AddRating(selectedProductId, rating);
+        SelectProduct(selectedProductId);
+    }
+}
