@@ -1,0 +1,87 @@
+﻿@page
+@model QuickKitchen.WebSite.Pages.Recipes.IndexModel
+@{
+    ViewData["Title"] = "Index page";
+}
+<link rel="stylesheet" href="~/css/site.css" />
+
+<div class="container">
+
+    <!-- Create button to navigate to the Create page -->
+    <a asp-page="Create" class="btn btn-link create-button">
+        Create
+    </a>
+
+    <!-- Button to sort products alphabetically -->
+    <button type="button" class="btn btn-link sort-btn" onclick="sortProducts()">Sort Alphabetically</button>
+
+    <!-- Button to reset the table order -->
+    <button type="button" class="btn btn-link sort-btn" id="resetButton" onclick="resetTable()">Reset</button>
+    
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="productsTableBody">
+            @{
+                var index = 0;
+            }
+            @foreach (var product in Model.Products)
+            {
+                <tr data-index="@index">
+                    <td>@product.Title</td>
+                    <td><a asp-page="Read" asp-route-id="@product.Id">Read</a></td>
+                </tr>
+                {
+                    index++;
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script>
+
+        // exclude header row
+        var originalRows = Array.from(document.getElementById("productsTableBody").rows).slice();
+
+        // create copy
+        var originalOrder = originalRows.slice(); 
+
+        function shuffle(array) {
+
+            // Function to shuffle the array randomly
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        
+        function resetTable() {
+
+            // Function to reset the table order to the original order
+            var productsTableBody = document.getElementById("productsTableBody");
+            productsTableBody.replaceChildren(...originalOrder);
+        }
+
+
+        function sortProducts() {
+
+            // Function to sort the products alphabetically
+            var productsTableBody = document.getElementById("productsTableBody");
+
+            // create copy
+            var rows = originalRows.slice(); 
+            rows.sort(function (a, b) {
+                return a.cells[0].textContent.localeCompare(b.cells[0].textContent);
+            });
+            productsTableBody.replaceChildren(...rows);
+        }
+    </script>
+}

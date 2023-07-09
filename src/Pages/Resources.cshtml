@@ -1,0 +1,219 @@
+﻿@page
+@model QuickKitchen.WebSite.Pages.ResourcesModel
+@{
+    ViewData["Title"] = "Resources";
+}
+
+<link rel="stylesheet" type="text/css" href="~/css/site.css" />
+<audio id="alarmSound" src="\sound\mixkit-dog-barking-twice-1.wav" preload="auto"></audio>
+
+<div class="conversion-section">
+    <div class="conversion-container">
+        <a href="https://www.unitconverters.net/" class="conversion-button">Go to Unit Conversion</a>
+    </div>
+</div>
+
+<div class="resources">
+    <div class="time-section">
+        <div class="timer-container">
+            <div class="timer-box">
+                <div class="timer-label">TIMER</div>
+                <div class="timer">
+                    <input class="timer-num" type="number" id="hoursInput" min="0" value="00" />:
+                    <input class="timer-num" type="number" id="minutesInput" min="0" max="59" value="00" />:
+                    <input class="timer-num" type="number" id="secondsInput" min="0" max="59" value="00" />
+                    <div class="timer-buttons">
+                        <button id="startBtn" onclick="startTimer()"><i class="fas fa-play"></i></button>
+                        <button id="stopBtn" onclick="stopTimer()"><i class="fas fa-stop"></i></button>
+                        <button id="resetBtn" onclick="resetTimer()"><i class="fas fa-undo"></i></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="timer-container">
+            <div class="timer-box">
+                <div class="timer-label">STOPWATCH</div>
+                <div class="timer">
+                    <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+                    <div class="timer-buttons">
+                        <button id="startBtn" onclick="startStopwatch()"><i class="fas fa-play"></i></button>
+                        <button id="stopBtn" onclick="stopStopwatch()"><i class="fas fa-stop"></i></button>
+                        <button id="resetBtn" onclick="resetStopwatch()"><i class="fas fa-undo"></i> </button>
+                    </div>
+                </div>
+                <ul class="laps-container" id="laps"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="links">
+        <div class="fav-container">
+            <div class="fav-label">Our Favorite Recipe Websites </div>
+            <div class="buttonsfav-container">
+                <a href="https://www.allrecipes.com/" class="buttonfav">All Recipies </a>
+                <a href="https://www.foodnetwork.com/" class="buttonfav">Food Network</a>
+                <a href="https://thewoksoflife.com/" class="buttonfav">The Woks of Life</a>
+                <a href="https://spicecravings.com/t" class="buttonfav">Spice Cravings </a>
+                <a href="https://www.tarladalal.com/" class="buttonfav">Tarladalal</a>
+            </div>
+        </div>
+
+        <div class="rectangular-container">
+            <div class="rectangular-label">Online Groceries</div>
+            <div class="buttons-container">
+                <a href="https://www.amazon.com/fmc/storefront?almBrandId=QW1hem9uIEZyZXNo" class="button">Amazon Fresh</a>
+                <a href="https://www.safeway.com/" class="button">Safeway</a>
+                <a href="https://www.sayweee.com/" class="button">Weee!</a>
+                <a href="https://blinkit.com/brand/grocery" class="button">Blinkit</a>
+                <a href="https://www.instacart.com/" class="button">Instacart</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var stopwatchInterval;
+    var laps = [];
+    var lapCounter = 1;
+    var isStopwatchRunning = false;
+
+    function startStopwatch() {
+        if (!isStopwatchRunning) {
+            var hoursElement = document.getElementById('hours');
+            var minutesElement = document.getElementById('minutes');
+            var secondsElement = document.getElementById('seconds');
+
+            var hours = parseInt(hoursElement.innerText);
+            var minutes = parseInt(minutesElement.innerText);
+            var seconds = parseInt(secondsElement.innerText);
+
+            stopwatchInterval = setInterval(function () {
+                seconds++;
+                if (seconds === 60) {
+                    seconds = 0;
+                    minutes++;
+                    if (minutes === 60) {
+                        minutes = 0;
+                        hours++;
+                    }
+                }
+                hoursElement.innerText = padNumber(hours);
+                minutesElement.innerText = padNumber(minutes);
+                secondsElement.innerText = padNumber(seconds);
+            }, 1000);
+
+            isTimerRunning = true;
+        }
+    }
+
+    function stopStopwatch() {
+        clearInterval(stopwatchInterval);
+        isStopwatchRunning = false;
+    }
+
+    function padNumber(number) {
+        return number.toString().padStart(2, '0');
+    }
+
+    function recordLap() {
+        if (isStopwatchRunning) {
+            var hoursElement = document.getElementById('hours');
+            var minutesElement = document.getElementById('minutes');
+            var secondsElement = document.getElementById('seconds');
+
+            var hours = hoursElement.innerText;
+            var minutes = minutesElement.innerText;
+            var seconds = secondsElement.innerText;
+            var lapTime = hours + ':' + minutes + ':' + seconds;
+            laps.push({ lapTime });
+            lapCounter++;
+
+            var lapsElement = document.getElementById('laps');
+            var li = document.createElement('li');
+            li.innerText = 'LAP : ' + lapTime;
+            lapsElement.appendChild(li);
+        }
+    }
+
+    function resetStopwatch() {
+        clearInterval(stopwatchInterval);
+
+        var hoursElement = document.getElementById('hours');
+        var minutesElement = document.getElementById('minutes');
+        var secondsElement = document.getElementById('seconds');
+
+        hoursElement.innerText = '00';
+        minutesElement.innerText = '00';
+        secondsElement.innerText = '00';
+
+        laps = [];
+        lapCounter = 1;
+        var lapsElement = document.getElementById('laps');
+        lapsElement.innerHTML = '';
+
+        isStopwatchRunning = false;
+    }
+
+
+    var timerInterval;
+    var startTime, endTime;
+    var hoursInput, minutesInput, secondsInput;
+    var isTimerRunning = false;
+
+    function startTimer() {
+        if(!isTimerRunning) {
+            hoursInput = document.getElementById('hoursInput');
+            minutesInput = document.getElementById('minutesInput');
+            secondsInput = document.getElementById('secondsInput');
+
+            var hours = parseInt(hoursInput.value);
+            var minutes = parseInt(minutesInput.value);
+            var seconds = parseInt(secondsInput.value);
+
+            var totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
+            startTime = Date.now();
+
+            timerInterval = setInterval(function () {
+                var elapsedTime = Math.floor((Date.now() - startTime + 1) / 1000);
+                if(elapsedTime >= totalSeconds + 1) {
+                    playSound('alarmSound')
+                    alert('Woof Woof! Time\'s Up!');
+                    stopTimer();
+                    return;
+                }
+
+                var secondsLeft = totalSeconds - elapsedTime;
+                var displayHrs = Math.floor(secondsLeft / (60 * 60));
+                var displayMin = Math.floor((secondsLeft % (60 * 60)) / 60);
+                var displaySec = secondsLeft % 60;
+
+                hoursInput.value = padNumber(displayHrs);
+                minutesInput.value = padNumber(displayMin);
+                secondsInput.value = padNumber(displaySec);
+            }, 1000);
+            isTimerRunning = true;
+        }
+    }
+        
+    function stopTimer() {
+        clearInterval(timerInterval);
+        isTimerRunning = false;
+        endTime = Date.now();
+    }
+
+    function resetTimer() {
+        clearInterval(timerInterval);
+
+        hoursInput.value = '00';
+        minutesInput.value = '00';
+        secondsInput.value = '00';
+
+        isTimerRunning = false;
+    }
+
+    function playSound(soundId) {
+        var audioElement = document.getElementById(soundId);
+        audioElement.play();
+    }
+</script>

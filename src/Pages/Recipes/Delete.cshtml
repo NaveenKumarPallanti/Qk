@@ -1,0 +1,88 @@
+﻿@page "{id}"
+@using QuickKitchen.WebSite.Services
+@inject JsonFileProductService ProductService
+@model QuickKitchen.WebSite.Pages.Recipes.DeleteModel
+@{
+    ViewData["Title"] = "Delete Page";
+}
+
+<h1>Delete</h1>
+
+<div class="container ">
+    <form method="post">
+
+        <!-- Display validation errors -->
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @Html.HiddenFor(x => x.Recipe.Id)
+        
+        <!-- Display the recipe's title -->
+        <div class="form-group">
+            <label asp-for="Recipe.Title" class="control-label"></label>
+            <input asp-for="Recipe.Title" class="form-control" readonly />
+            <span asp-validation-for="Recipe.Id" class="text-danger"></span>
+        </div>
+
+        <!-- Display the recipe's description -->
+        <div class="form-group">
+            <label asp-for="Recipe.Description" class="control-label"></label>
+            <input asp-for="Recipe.Description" class="form-control" readonly />
+            <span asp-validation-for="Recipe.Description" class="text-danger"></span>
+        </div>
+
+        <!-- Display the recipe's category -->
+        <div class="form-group">
+            <label asp-for="Recipe.Category" class="control-label"></label>
+            <input asp-for="Recipe.Category" class="form-control" readonly />
+            <span asp-validation-for="Recipe.Category" class="text-danger"></span>
+        </div>
+
+        <!-- Display the recipe's time -->
+        <div class="form-group">
+            <label asp-for="Recipe.Time" class="control-label"></label>
+            <input asp-for="Recipe.Time" class="form-control" readonly />
+            <span asp-validation-for="Recipe.Time" class="text-danger"></span>
+        </div>
+
+        <!-- Display the recipe's ingredients -->
+        <div class="form-group">
+            <label asp-for="Recipe.Ingredients" class="control-label"></label>
+            <input asp-for="Recipe.Ingredients" value="@string.Join('|', Model.Recipe.Ingredients)" class="form-control" readonly />
+            <span asp-validation-for="Recipe.Ingredients" class="text-danger"></span>
+        </div>
+
+        <!-- Display the recipe's instructions -->
+        <div class="form-group">
+            <label asp-for="Recipe.Instructions" class="control-label"></label>
+            <input asp-for="Recipe.Instructions" value="@string.Join('|', Model.Recipe.Instructions)" class="form-control" readonly />
+            <span asp-validation-for="Recipe.Instructions" class="text-danger"></span>
+        </div>
+
+
+        <!-- Display the recipe's URL -->
+        <div class="form-group">
+            <label asp-for="Recipe.Url" class="control-label"></label>
+            <input asp-for="Recipe.Url" class="form-control" readonly />
+            <span asp-validation-for="Recipe.Url" class="text-danger"></span>
+        </div>
+
+        <!-- Display the recipe's image -->
+        <div class="form-group">
+            <label asp-for="Recipe.Image" class="control-label"></label>
+            <input asp-for="Recipe.Image" class="form-control" readonly />
+            <span asp-validation-for="Recipe.Image" class="text-danger"></span>
+        </div>
+
+        <!-- Submit button for deleting the recipe -->
+        <div class="form-group">
+           
+            <input type="submit" value="Permanently Delete " class="btn btn-danger" />
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

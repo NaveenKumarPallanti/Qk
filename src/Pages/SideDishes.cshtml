@@ -1,0 +1,12 @@
+﻿@page
+@using QuickKitchen.WebSite.Components
+@model QuickKitchen.WebSite.Pages.SideDishesModel
+@{
+    ViewData["Title"] = "Side Dish Page";
+}
+
+<!-- Render the SideDishList component using server prerendering -->
+@(await Html.RenderComponentAsync<SideDishList>(RenderMode.ServerPrerendered))
+
+<!-- Include the Blazor server-side JavaScript file -->
+<script src="_framework/blazor.server.js"></script>

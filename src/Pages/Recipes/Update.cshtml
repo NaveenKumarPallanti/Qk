@@ -1,0 +1,102 @@
+﻿@page "{id}"
+@using QuickKitchen.WebSite.Services
+@using System.ComponentModel.DataAnnotations;
+@model QuickKitchen.WebSite.Pages.Recipes.UpdateModel
+
+@{
+    string headingText = Model.title;
+}
+
+<h1>@headingText</h1>
+
+<div class="container">
+    <form method="post" onsubmit="return validateTime()">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @Html.HiddenFor(x => x.Product.Id)
+
+        <div class="form-group">
+            <label asp-for="Product.Title" class="control-label"></label>
+            <input asp-for="Product.Title" class="form-control" maxlength="50" required data-val="true" data-val-required="Title is required with max length of 50 characters." />
+            <span asp-validation-for="Product.Title" class="text-danger"></span>
+        </div>
+
+
+
+        <div class="form-group">
+            <label asp-for="Product.Description" class="control-label"></label>
+            <input asp-for="Product.Description" class="form-control" maxlength="250" required data-val="true" data-val-required="Description is required with max length of 250 characters." />
+            <span asp-validation-for="Product.Description" class="text-danger"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Category" class="control-label"></label>
+            <select asp-for="Product.Category" class="form-control">
+                <option value="Main">Main</option>
+                <option value="Side">Side</option>
+                <option value="Snack">Snack</option>
+                <option value="Dessert">Dessert</option>
+            </select>
+            <span asp-validation-for="Product.Category" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Time" class="control-label"></label>
+            <input asp-for="Product.Time" class="form-control" required data-val="true" data-val-required="Time in minutes is required." data-val-regex="Time should be entered in minutes (e.g. 30)." data-val-regex-pattern="^(Prep|Cook|Total):\s*\d+\s*minutes\s*\|\s*(Prep|Cook|Total):\s*\d+\s*minutes\s*\|\s*(Prep|Cook|Total):\s*\d+\s*minutes$" />
+            <span asp-validation-for="Product.Time" class="text-danger"></span>
+        </div>
+
+        <script>
+            function validateTime() {
+                var timeInput = $('#time-input').val();
+                var timeValues = timeInput.split("|");
+                for (var i = 0; i < timeValues.length; i++) {
+                    var value = timeValues[i].split(":")[1].trim();
+                    if (value == "") {
+                        alert("Please enter all time values.");
+                        return false;
+                    }
+                }
+                return true;
+            }
+        </script>
+
+        <div class="form-group">
+            <label asp-for="Product.Ingredients" class="control-label"></label>
+            <input asp-for="Product.Ingredients" value="@string.Join('|', Model.Product.Ingredients)" class="form-control" required data-val="true" data-val-required="Enter at least one ingredient.">
+            <span asp-validation-for="Product.Ingredients" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Instructions" class="control-label"></label>
+            <input asp-for="Product.Instructions" value="@string.Join('|', Model.Product.Instructions)" class="form-control" required data-val="true" data-val-required="Enter at least one instruction." />
+            <span asp-validation-for="Product.Instructions" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Url" class="control-label"></label>
+            <input asp-for="Product.Url" class="form-control" required data-val="true" data-val-required="URL is required." data-val-url="Invalid URL format." />
+            <span asp-validation-for="Product.Url" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Image" class="control-label"></label>
+            <input asp-for="Product.Image" class="form-control" required
+                   data-val="true" data-val-required="URL or file path is required."
+                   data-val-regex-pattern="^((https?:\/\/|file:\/\/\/|\/)[\S]+|\/[\w-]+(\/[\w-]+)*\/[\w-]+\.\w{2,})$"
+                   data-val-regex="Invalid URL or file path format." />
+            <span asp-validation-for="Product.Image" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

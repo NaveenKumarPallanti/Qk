@@ -1,0 +1,61 @@
+﻿@page
+@model QuickKitchen.WebSite.Pages.SearchModel
+@{
+	ViewData["Title"] = "Search";
+}
+<link rel="stylesheet" href="~/css/site.css" />
+
+
+<!-- Check if there are no results to display -->
+@if (Model.Results.Count == 0)
+{
+	<div class="search-header">
+	  <div class="search-img-container">
+		<img class="search-img" src="/images/gif/long-livethe-blob-sad-face.gif" alt="SadFace">
+	  </div>
+	  <h1 class="search-header"><strong>Sorry. We can't find any recipes for "@Model.Query".</strong></h1>
+	</div>
+}
+
+else
+{
+	<div class="search-results-container">
+		<h1 class="search-results-h1"><strong>@Model.Query</strong></h1>
+
+		<!-- Check if there is only one result -->
+		@if(Model.Results.Count == 1)
+		{
+            <h4 class="search-results-h4">@Model.Results.Count recipe</h4>
+        }
+        else
+		{
+			<h4 class="search-results-h4">@Model.Results.Count recipes</h4>
+		}
+	</div>
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th>
+					Title
+				</th>
+				<th>
+					Description
+				</th>
+				<th>
+					Action
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- Loop through each recipe in the search results and display the details -->
+			@foreach (var recipes in Model.Results)
+			{
+				<tr>
+					<td>@recipes.Title</td>
+					<td>@recipes.Description</td>
+					<td><a href="/Recipes/Read/@recipes.Id">Read</a></td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}

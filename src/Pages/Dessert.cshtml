@@ -1,0 +1,10 @@
+﻿@page
+@using QuickKitchen.WebSite.Components
+@model QuickKitchen.WebSite.Pages.DessertModel
+@{
+    ViewData["Title"] = "Dessert Page";
+}
+
+@(await Html.RenderComponentAsync<DessertList>(RenderMode.ServerPrerendered))
+
+<script src="_framework/blazor.server.js"></script>

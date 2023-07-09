@@ -1,0 +1,246 @@
+﻿@using System.IO
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment Environment;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Quick Kitchen</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-navbar border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <img src="~/images/logo/Logo.png" alt="The Quick Kitchen website logo" title="Quick Kitchen Logo" class="layout-img" width="270" height="100" />
+                </a>
+                <!--<a class="navbar-brand" asp-area="" asp-page="/Index">Quick Kitchen</a>-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav flex-grow-1 mr-auto">
+                        <li class="dropdown nav-item">
+                            <a class="nav-link text-dark dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Recipes
+                                </a>
+                            <div class="dropdown-menu dropdown-content">
+                                <a href="/MainCourse">Main Course</a>
+                                <a href="/SideDishes">Side Dishes</a>
+                                <a href="/Snacks">Snacks</a>
+                                <a href="/Dessert">Desserts</a>
+                                <hr>
+                                <a href="/Recipes/Create">Create a Recipe</a>
+                                <a href="/Recipes/Random">See a Random Recipe</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Recipes/Index">Collection</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Resources">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark about-us-link" asp-area="" asp-page="/AboutUs">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <form class="form-inline my-2 my-lg-0" action="/Search" method="get">
+                                <div class="input-group search-box search-box-mobile">
+                                    <input class="form-control mr-sm-2" type="search" name="query" placeholder="Search recipes" aria-label="Search" required>
+                                    <div class="input-group-append">
+                                        <button class="btn my-2 my-sm-0 search-button" type="submit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                                                <circle cx="9" cy="9" r="6" />
+                                                <line x1="20" y1="20" x2="15.65" y2="15.65" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="col dark-mode-switch-container">
+            <div class="sun-moon">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="darkModeSwitch" onchange="toggleDarkMode()">
+                    <label class="custom-control-label" for="darkModeSwitch" title="Dark Mode Switch">
+                        <i class="fas fa-moon"></i>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <main role="main" class="pb-3">
+            <div class="moon-icon-space">
+                @RenderBody()
+            </div>
+        </main>
+    </div>
+  
+    <footer class="border-top footer bg-footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <p>GET THE QK NEWSLETTER</p>
+                    <form method="post">
+                        <div class="form-row align-items-center">
+                            <div class="col-8">
+                                <input type="email" name="email" class="form-control" id="email" placeholder="@(OnHomepage() ? "Enter your email" : "Enter from homepage")" @(OnHomepage() ? "" : "readonly") required>
+                            </div>
+                            <div class="col-4">
+                                <button type="submit" class="btn" @(OnHomepage() ? "" : "disabled")>Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-4 text-center">
+                <p>FOLLOW US</p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="https://www.instagram.com/qchen2023?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram layout-social"></i></a></li>
+                        <li class="list-inline-item"><a href="https://twitter.com/quick91739"><i class="fab fa-twitter layout-social"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100092174738245"><i class="fab fa-facebook layout-social"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <p>CONTACT US</p>
+                    <a href="mailto:admin@quickkitchen.com"><i class="fas fa-envelope layout-social"></i> <span class="layout-email-link">admin@quickkitchen.com</span></a>
+                    <p class="layout-page-links"><a asp-area="" asp-page="/AboutUs">About Us</a> | <a asp-area="" asp-page="/Privacy">Privacy</a> | &copy;2023 Quick Kitchen</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Newsletter email subscription confirmation popup -->
+    <div class="modal fade" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="subscribeModalLabel">Quick Kitchen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Thank you for subscribing to our newsletter!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Processes a subscription email submitted via a POST request -->
+    @{
+        bool isPost = false;
+        string email = null;
+
+        if (Context.Request.Method == "POST" && Context.Request.HasFormContentType)
+        {
+            isPost = true;
+            email = Context.Request.Form["email"];
+            string directoryPath = Environment.WebRootPath + "\\email";
+            string filePath = directoryPath + "\\email.txt";
+
+            // Check if the directory exists, if not, create it
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+
+            // Check if the file exists, if not, create it
+            if (!System.IO.File.Exists(filePath))
+            {
+                using (StreamWriter writer = System.IO.File.CreateText(filePath))
+                {
+                    writer.WriteLine(email);
+                }
+            }
+            else
+            {
+                // If the file exists, append the email to the list
+                using (StreamWriter writer = new StreamWriter(filePath, true))
+                {
+                    writer.WriteLine(email);
+                }
+            }
+        }
+    }
+
+    <!-- Displays a modal window when the webpage finshes loading. isPost must be true. -->
+    @if (isPost)
+    {
+        <script>
+            window.addEventListener('load', function () {
+                $('#subscribeModal').modal('show');
+            });
+        </script>
+    }
+
+    <!-- Checks if the user is on the homepage -->
+    @{
+        bool OnHomepage()
+        {
+            return Context.Request.Path.Equals("/", StringComparison.OrdinalIgnoreCase);
+        }
+    }
+
+    <!-- Script for dark mode -->
+    <script>
+        function toggleDarkMode() {
+            var body = document.body;
+            var header = document.getElementById("header");
+            var footer = document.getElementById("footer");
+            body.classList.toggle("dark-mode");
+
+            if (body.classList.contains("dark-mode")) {
+                footer.classList.add("dark-mode-footer");
+                header.classList.add("dark-mode-footer");
+                localStorage.setItem('darkMode', 'true');
+            } else {
+                footer.classList.remove("dark-mode-footer");
+                header.classList.remove("dark-mode-footer");
+                localStorage.setItem('darkMode', 'false');
+            }
+        }
+
+        window.addEventListener('load', function () {
+            var body = document.body;
+            var header = document.getElementById("header");
+            var footer = document.getElementById("footer");
+
+            // Check if 'darkMode' is already set in localStorage
+            if (localStorage.getItem('darkMode') === null) {
+                // If 'darkMode' is not set in localStorage, set it to 'false' (light mode)
+                localStorage.setItem('darkMode', 'false');
+            }
+
+            // Now, apply the dark mode setting
+            if (localStorage.getItem('darkMode') === 'true') {
+                body.classList.add("dark-mode");
+                footer.classList.add("dark-mode-footer");
+                header.classList.add("dark-mode-footer");
+                document.getElementById("darkModeSwitch").checked = true;
+            }
+        });
+    </script>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

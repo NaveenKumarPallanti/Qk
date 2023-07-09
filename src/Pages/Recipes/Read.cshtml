@@ -1,0 +1,123 @@
+﻿@page "{id}"
+@using QuickKitchen.WebSite.Services
+@inject JsonFileProductService ProductService
+@model QuickKitchen.WebSite.Pages.Recipes.ReadModel
+
+@{
+    ViewData["Title"] = "Read page";
+}
+<link rel="stylesheet" href="~/css/site.css" />
+
+<!DOCTYPE html>
+<html>
+<body>
+<div id="scrollThrough">
+<h1>Read</h1>
+
+<div class="content">
+    <div class="content-leave-comment">
+        <h5 class="title-leave-comment" id="productTitle">@Model.Product.Title</h5>
+        <button type="button" class="btn btn-link leave-comment-btn" onclick="scrollToComments()">Leave a Comment</button>
+    </div>
+    <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+        <a class="a2a_button_facebook"></a>
+        <a class="a2a_button_twitter"></a>
+        <a class="a2a_button_reddit"></a>
+        <a class="a2a_button_copy_link"></a>
+    </div>
+    <script>
+        var a2a_config = a2a_config || {};
+        a2a_config.num_services = 4;
+    </script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+    <img class="img-fluid cropped" src="@Model.Product.Image" alt="@Model.Product.Title" />
+    <p class="read-font">@Model.Product.Description</p>
+    <p class="read-font">@Model.Product.Time</p>
+    <div class="ingredient-list">
+        <h2>Ingredients</h2>
+        <ul>
+            @if (Model.Product.Ingredients != null)
+            {
+
+                <!-- Display each ingredient in a list -->
+                @foreach (var line in Model.Product.Ingredients)
+                {
+                    <li>@line</li>
+                }        
+            }
+        </ul>
+    </div>
+    <div class="instruction-list">
+        <h2>Instructions</h2>
+        <ol>
+            @if (Model.Product.Ingredients != null)
+            {
+
+                 <!-- Display each instruction step in a numbered list -->
+                 @foreach (var line in Model.Product.Instructions)
+                 {
+                     <li>@line</li>
+                 }
+            }
+        </ol>
+    </div>
+</div>
+
+<div id="comment-section"></div>
+</div>
+<div class="comment-section">
+    <h2>Comments</h2>
+        <form method="post">
+            <div class="form-group">
+                <label>How did you like this recipe?</label>
+                <textarea class="form-control" id="comment" name="comment" rows="3" placeholder="Leave a comment" maxlength="1000" required></textarea>
+            </div>
+            <div class="form-group">
+               <input class="form-control" id="name" name="name" rows="1" placeholder="Your name" maxlength="100">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <ul>
+            @if (Model.Product.Comments != null)
+            {
+
+                <!-- Display comments in reverse chronological order -->
+                for (int i = Model.Product.Comments.Count - 1; i >= 0; i--)
+                {
+                    var comment = Model.Product.Comments[i];
+                    <li>
+                        <div>"@comment.Text"</div>
+                        <div class="comment-details">
+                            <div>@comment.Name, @comment.Date.ToString("MM/dd/yyyy")</div>
+                        </div>
+                    </li>
+                }
+            }
+        </ul>
+</div>
+<br />
+<br />
+<div class="row">
+
+        <!-- Button to navigate to the Update page for the current recipe -->
+     <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary" onclick="">Update</a> &nbsp; &nbsp;
+
+        <!-- Button to delete the current recipe, with a confirmation prompt -->
+     <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger"
+           onclick="return confirm('Are you sure you want to delete this Recipe?');"
+           data-toggle="tooltip" title="Delete this Recipe">
+            <i class="fa fa-trash"></i> Delete
+     </a>
+</div>
+</body>
+</html>
+
+<script>
+    function scrollToComments() {
+        var scrollThroughHeight = document.getElementById("scrollThrough").offsetHeight;
+        var additionalLineHeight = 60;
+        var scrollPosition = scrollThroughHeight + additionalLineHeight;
+        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+    }
+</script>

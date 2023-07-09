@@ -1,0 +1,12 @@
+﻿@page
+@using QuickKitchen.WebSite.Components
+@model QuickKitchen.WebSite.Pages.MainCourseModel
+@{
+    ViewData["Title"] = "Main Course Page";
+}
+
+<!-- Main Course Component -->
+@(await Html.RenderComponentAsync<MainCourseList>(RenderMode.ServerPrerendered))
+
+<!-- Blazor Server-Side Script -->
+<script src="_framework/blazor.server.js"></script>

@@ -1,0 +1,121 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = QuickKitchen.WebSite
+build_property.RootNamespace = QuickKitchen.WebSite
+build_property.ProjectDir = C:\Users\palla\Source\Repos\QuickKitchen.Website\src\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\palla\Source\Repos\QuickKitchen.Website\src
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Components/DessertList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEZXNzZXJ0TGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Components/MainCourseList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNYWluQ291cnNlTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Components/ProductList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0TGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Components/SideDishList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaWRlRGlzaExpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Components/SnacksList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTbmFja3NMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXRVcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/Dessert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVzc2VydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/ItemNotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXRlbU5vdEZvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/MainCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpbkNvdXJzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/Recipes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjaXBlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/Recipes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjaXBlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/Recipes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjaXBlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/Recipes/Random.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjaXBlc1xSYW5kb20uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/Recipes/Read.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjaXBlc1xSZWFkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/Recipes/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjaXBlc1xVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/Resources.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzb3VyY2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/SideDishes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lkZURpc2hlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/Snacks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU25hY2tzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/palla/Source/Repos/QuickKitchen.Website/src/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
