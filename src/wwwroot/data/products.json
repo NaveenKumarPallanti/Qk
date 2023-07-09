@@ -1,0 +1,709 @@
+[
+  {
+    "Id": "lemon-herb-chicken",
+    "Category": "Main",
+    "Maker": "Carolyn Stilwell",
+    "img": "/images/simpleLemonHerbChicken/SimpleLemonHerbChicken.png",
+    "Url": "https://www.allrecipes.com/recipe/9011/simple-lemon-herb-chicken/",
+    "Title": "Simple Lemon-Herb Chicken",
+    "Description": "Lemon-herb chicken is a simple, quick, and delicious dish. All you need are a few herbs, a lemon, and of course, the chicken! The amount of spices are completely up to you. You can add more or less according to your taste.",
+    "Ratings": [
+      5,
+      5,
+      3,
+      2,
+      1,
+      5
+    ],
+    "Time": "Prep: 5 minutes | Cook: 10 minutes | Total: 15 minutes",
+    "Ingredients": [
+      "2 (5 ounce) skinless, boneless chicken breast halves",
+      "1 medium lemon, juiced, divided",
+      "salt to taste",
+      "1 tablespoon olive oil",
+      "1 pinch dried oregano",
+      "ground black pepper to taste",
+      "2 sprigs fresh parsley, for garnish"
+    ],
+    "Instructions": [
+      "Place chicken in a bowl; pour 1/2 of the lemon juice over top and season with salt.",
+      "Heat oil in a small skillet over medium-low heat. Add chicken to the hot oil, along with the remaining lemon juice and oregano. Season with pepper. Saut\u00E9 until golden brown and the juices run clear, 5 to 10 minutes per side.",
+      "Serve with parsley for garnish."
+    ],
+    "Comments": [
+      {
+        "Text": "Love this simple, tasty salad! ",
+        "Name": "Bob",
+        "Date": "2023-05-13T00:00:00-07:00"
+      },
+      {
+        "Text": "A must-try! Will make again soon. ",
+        "Name": "Kate",
+        "Date": "2023-05-13T00:00:00-07:00"
+      },
+      {
+        "Text": "Will share this with my family :)",
+        "Name": "Anonymous",
+        "Date": "2023-05-13T00:00:00-07:00"
+      }
+    ]
+  },
+  {
+    "Id": "gong-zai-noodle-soup",
+    "Category": "Main",
+    "Maker": "@woksoflife",
+    "img": "/images/gongZaiNoodleSoup/gong-zai-mian-hong-kong-5-650x953.jpg",
+    "Url": "https://thewoksoflife.com/gong-zai-mein-hong-kong-breakfast/",
+    "Title": "Gong Zai Noodle Soup",
+    "Description": "This noodle soup makes a tasty, quick, and inexpensive meal.",
+    "Ratings": null,
+    "Time": "Prep: 5 minutes | Cook: 10 minutes | Total: 15 minutes",
+    "Ingredients": [
+      "2 cups water",
+      "1-2 slices Spam",
+      "1 package Gong Zai Doll brand chicken flavored instant noodles",
+      "1 egg",
+      "1 pinch minced scallions (green parts only)"
+    ],
+    "Instructions": [
+      "Bring 2 cups of water to a boil in a medium pot.",
+      "Fry the Spam in a pan until it\u2019s golden brown around the edges. Turn off the heat, leaving it in the pan to keep it warm. Also start frying an egg sunny side up. Cover with a lid, and cook until the white is no longer runny, but the egg yolk is still soft.",
+      "Meanwhile, cook the noodles. Things will move quickly, so keep an eye on your egg to make sure it does not overcook. Stir the seasoning packets into the water, followed by the noodles, and cook for 2 \u00BD minutes, stirring to break them up. (At some point, you may need to take your egg off the heat to avoid overcooking.)",
+      "Pour the noodles and into your serving bowl, and arrange the spam and the egg over the top. Sprinkle with the scallions and serve immediately."
+    ],
+    "Comments": null
+  },
+  {
+    "Id": "broccolini",
+    "Category": "Side",
+    "Maker": "Jumaha",
+    "img": "/images/broccolini/broccolini.jpg",
+    "Url": "https://www.allrecipes.com/recipe/240206/simple-broccolini/",
+    "Title": "Simple Broccolini",
+    "Description": "This quick broccolini dish is delicious, good for you, and full of garlicky, lemony flavor. Broccolini is more tender than broccoli and has a milder flavor.",
+    "Ratings": [
+      5,
+      5,
+      3,
+      2,
+      1,
+      5
+    ],
+    "Time": "Prep: 10 minutes | Cook: 5 minutes | Total: 15 minutes",
+    "Ingredients": [
+      "1 bunch broccolini",
+      "2 tablespoons olive oil",
+      "1 clove garlic, minced",
+      "1 lemon wedge",
+      "1 pinch red pepper flakes (Optional)",
+      "salt and ground black pepper to taste"
+    ],
+    "Instructions": [
+      "Place broccolini in a large skillet with about 2 inches of water; bring to a boil and cook until bright green, 1 to 2 minutes. Drain.",
+      "Heat olive oil in the same skillet over medium heat. Stir in garlic and cook until golden and fragrant, 1 to 2 minutes. Add broccolini; cook and stir until heated through, 2 to 3 minutes.",
+      "Squeeze lemon juice over broccoli and season with red pepper flakes, salt, and pepper."
+    ],
+    "Comments": null
+  },
+  {
+    "Id": "Samosa Chaat",
+    "Category": "Snack",
+    "Maker": "Spicecravings",
+    "img": "/images/Samosachaat/Samosa-Chaat-500x500.webp",
+    "Url": "https://spicecravings.com/samosa-chaat",
+    "Title": "Samosa Chaat",
+    "Description": "Perfect snack for everyone. Lip smacking good!",
+    "Ratings": [
+      5,
+      5,
+      3,
+      2,
+      1,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "Time": "Prep: 5 minutes | Cook: 20 minutes | Total: 25 minutes",
+    "Ingredients": [
+      "1 samosa (ready made or freshly made)",
+      "1 1/2 cup cooked chickpeas",
+      "1 cu onion",
+      "1 tbsp olive oil",
+      "1 bay leaf",
+      "2 tbsp minced ginger",
+      "2 tbssp minced garlic",
+      "1 tbsp finely chopped serrano",
+      "1/2 tsp amchur",
+      "1/2 tsp Chaat masala",
+      "1 cup choppee tomato",
+      "2 tsp other spices/ Indian spices"
+    ],
+    "Instructions": [
+      "Add about 1/2 cup cooked chana masala in a wide serving bowl.",
+      "Place a cooked samosa on top. later break into paster or let it be like a samosa (personal choice).",
+      "Top with 2-3 teaspoons each of tamarind chutney and cilantro chutney (sauce).",
+      "Top with a pinch of chaat masala, roasted cayenne and a teaspoon of topping as prefered, yogurt, crisps etc."
+    ],
+    "Comments": null
+  },
+  {
+    "Id": "asparagus",
+    "Category": "Side",
+    "Maker": "Hannah",
+    "img": "/images/asparagus/asparagus.png",
+    "Url": "https://www.allrecipes.com/recipe/241810/easiest-asparagus-recipe/",
+    "Title": "Easiest Asparagus Recipe",
+    "Description": "I have always been good at sauteeing asparagus, but this is one of my favorite methods to create a sweet and traditional appetizer.",
+    "Ratings": [
+      5,
+      5,
+      3,
+      2,
+      1,
+      5
+    ],
+    "Time": "Prep: 5 minutes | Cook: 10 minutes | Total: 15 minutes",
+    "Ingredients": [
+      "2 tablespoons butter, or more as needed",
+      "1 bunch asparagus, trimmed",
+      "1 teaspoon honey",
+      "1/8 teaspoon garlic powder",
+      "1/8 teasponn cayenne pepper"
+    ],
+    "Instructions": [
+      "Melt 2 tablespoons butter in a skillet over medium-low heat.",
+      "Cook asparagus in melted butter, stirring a few times, until tender, 6 to 8 minutes. If you find the asparagus sticks to the pan, you can add up to 1 tablespoon butter more while cooking.",
+      "Drizzle honey over the asparagus and stir to coat; season with garlic powder and cayenne pepper."
+    ],
+    "Comments": null
+  },
+  {
+    "Id": "scallion-ginger-beef-and-tofu-stirfry",
+    "Category": "Main",
+    "Maker": "woksoflife",
+    "img": "/images/beefAndTofuStirFry/ginger-scallion-beef-tofu-12-650x967.jpg",
+    "Url": "https://thewoksoflife.com/scallion-ginger-beef-tofu/",
+    "Title": "Scallion Ginger Beef and Tofu Stir-fry",
+    "Description": "This dish is extremely flavorful and goes well with some steamed rice.",
+    "Ratings": null,
+    "Time": "Prep: 20 minutes | Cook: 10 minutes | Total: 30 minutes",
+    "Ingredients": [
+      "8 oz. flank steak",
+      "1 1/2 teaspoons water",
+      "1 teaspoon cornstarch",
+      "1/2 teaspoon oyster sauce",
+      "1/8 teaspoon baking soda (optional tenderizer)",
+      "8 ounces firm tofu",
+      "2 tablespoons hot water",
+      "1/2 teaspoon sugar",
+      "1/2 teasppoon hoisin sauce",
+      "1/2 teaspoon dark soy sauce",
+      "2 tablespoons light soy sauce",
+      "1/4 teaspoon sesame oil",
+      "1/8 teaspoon ground white pepper",
+      "1/2 cup red bell pepper (cut into 1-inch pieces)",
+      "7 slices ginger",
+      "1 clove garlic (chopped)",
+      "4 large scallions (sliced at an angle into 2 inch pieces, white and green pieces separated)",
+      "2 1/2 tablespoons vegetable oil (divided)",
+      "1 tablespoon Shaoxing wine"
+    ],
+    "Instructions": [
+      "Thinly slice the flank steak against the grain into 2 \u00BD inch (6 cm) pieces, and add to a medium bowl along with 1 \u00BD tablespoons water, the cornstarch, oil, oyster sauce, and baking soda (if using). Set aside for 20-30 minutes while you prepare the other ingredients.",
+      "Slice the tofu into \u00BD inch to \u00BC inch (about 1 cm) thick rectangles, and set aside.",
+      "In a small bowl, make the sauce mixture by combining the hot water, sugar, hoisin sauce, dark soy sauce, light soy sauce, sesame oil, and white pepper. Mix well until the sugar is dissolved.",
+      "Prepare the bell pepper, ginger, garlic and scallions. Slice any thicker pieces of scallion in half lengthwise.",
+      "Heat the wok over high heat until it just begins to smoke. Only when it\u2019s begun to smoke, add 1 tablespoon of oil to coat. Carefully lay the slices of tofu in the wok in a single layer, and sear for about 2 minutes per side or until golden brown. Set aside on a plate.",
+      "Again, heat the wok over high heat until smoking and add another tablespoon of oil. Add the beef in a single layer, and sear for 30 seconds to 1 minute. Stir-fry for another 15-30 seconds, until the beef is about 75-80% cooked. Remove from the wok, and set aside.",
+      "Add another \u00BD tablespoon of oil to the wok, along with the ginger slices. Caramelize and brown them for about 20 seconds. This infuses the oil and wok with all that ginger flavor. Add the garlic, white portion of the scallions, and red pepper, making sure the heat is still on high. Stir-fry for about 10 seconds, and add the Shaoxing wine.",
+      "Continue to stir-fry for another 30 seconds, and add the pan-fried tofu, beef (along with any juices), and sauce mixture. Stir-fry for another 20 seconds, until the sauce coats all the ingredients.",
+      "Add the green parts of the scallions, and stir-fry until the scallions are wilted. Plate and serve immediately with steamed rice."
+    ],
+    "Comments": null
+  },
+  {
+    "Id": "cookies-and-cream-parfaits",
+    "Category": "Dessert",
+    "Maker": "Food Network Magazine",
+    "img": "/images/cookiesAndCreamParfaits/cookiesAndCreamParfaits.jpeg",
+    "Url": "https://www.foodnetwork.com/recipes/food-network-kitchen/cookies-and-cream-parfaits-recipe-2105779",
+    "Title": "Cookies-and-Cream Parfaits",
+    "Description": "Make 2 layers of vanilla pudding, crushed chocolate wafer cookies and whipped cream in tall glasses. Top each with a cookie.",
+    "Ratings": [
+      5,
+      5,
+      3,
+      2,
+      1,
+      5
+    ],
+    "Time": "Prep: 10 minutes | Cook: 0 minutes | Total: 10 minutes",
+    "Ingredients": [
+      "2/3 cups vanilla pudding",
+      "1/4 cup crushed chocolate wafer cookies",
+      "1 whole chocolate wafer cookie",
+      "whipped cream as needed"
+    ],
+    "Instructions": [
+      "Make 2 layers of vanilla pudding, crushed chocolate wafer cookies and whipped cream in tall glasses.",
+      "Top each with a cookie."
+    ],
+    "Comments": null
+  },
+  {
+    "Id": "grilled-cod-with-spinach-and-tomatoes",
+    "Category": "Main",
+    "Maker": "tcasa",
+    "img": "/images/grilledCodWithSpinachAndTomatoes/grilledCodWithSpinachAndTomatoes.png",
+    "Url": "https://www.allrecipes.com/recipe/242134/grilled-cod-with-spinach-and-tomatoes/",
+    "Title": "Grilled Cod with Spinach and Tomatoes",
+    "Description": "I came up with this recipe because I could not find a recipe I was looking for. A very simple, easy, and quick dish to put together. I always make this for myself when I grill steaks for my family.",
+    "Ratings": [
+      3,
+      2,
+      1,
+      5,
+      5,
+      5
+    ],
+    "Time": "Prep: 10 minutes | Cook: 10 minutes | Total: 20 minutes",
+    "Ingredients": [
+      "1 (4 ounce) fillet cod",
+      "salt and ground black pepper to taste",
+      "1 pinch garlic powder, or to taste",
+      "\u00BC cup roughly chopped spinach, or to taste",
+      "\u00BC tomato, seeded and diced",
+      "1 tablespoon chopped onion",
+      "1 tablespoon olive oil, or to taste",
+      "1 tablespoon balsamic vinegar, or to taste",
+      "1 tablespoon balsamic vinegar, or to taste"
+    ],
+    "Instructions": [
+      "Preheat an outdoor grill for medium-high heat.",
+      "Place cod on a piece of aluminum foil and season with salt, black pepper, and garlic powder. Top cod with spinach, tomato, and onion; season again with salt and black pepper. Drizzle olive oil and balsamic vinegar over cod and top with mozzarella cheese. Fold foil over cod creating a packet, crimping the edges together making a seal.",
+      "Cook on the preheated grill until fish flakes easily with a fork, 7 to 9 minutes."
+    ],
+    "Comments": null
+  },
+  {
+    "Id": "deviled-eggs",
+    "Category": "Snack",
+    "Maker": "Jeff Sikes",
+    "img": "/images/deviledEggs/deviledEggs.png",
+    "Url": "https://www.allrecipes.com/recipe/228129/classic-savory-deviled-eggs/",
+    "Title": "Classic Savory Deviled Eggs",
+    "Description": "These classic deviled eggs are delightful. They\u0027re stuffed with a creamy blend of mayonnaise, Dijon mustard, and vinegar. I like to add garlic powder and garnish them with fresh dill.",
+    "Ratings": [
+      5,
+      5,
+      3,
+      2,
+      1,
+      5
+    ],
+    "Time": "Prep: 10 minutes | Cook: 0 minutes | Total: 10 minutes",
+    "Ingredients": [
+      "6 hard-cooked eggs, halved",
+      "1/4 cup mayonnaise",
+      "1 teaspoon rice wine vinegar",
+      "1 teaspoon Dijon mustard",
+      "1/2 teaspoon chopped fresh dill (Optional)",
+      "1/4 teaspoon garlic powder",
+      "1/8 teaspoon salt",
+      "12 sprigs fresh dill (Optional)"
+    ],
+    "Instructions": [
+      "Gather all ingredients.",
+      "Scoop egg yolks into a bowl and set egg whites aside.",
+      "Add mayonnaise, vinegar, mustard, 1/2 teaspoon chopped dill, garlic powder, and salt to the egg yolks; mash well until smooth.",
+      "Spoon or pipe yolk mixture into egg whites. Garnish with dill sprigs. Refrigerate until ready to serve."
+    ],
+    "Comments": null
+  },
+  {
+    "Id": "vegan-thai-basil-stirfry",
+    "Category": "Main",
+    "Maker": "woksoflife",
+    "img": "/images/veganThaiBasilStirfry/vegan-chicken-thai-basil-12.jpg",
+    "Url": "https://thewoksoflife.com/vegan-pad-krapow-thai-basil-stir-fry/",
+    "Title": "Vegan Thai Basil Stir-fry",
+    "Description": "Here is a vegetarian version of the popular Thai basil stir-fry, Pakapow.",
+    "Ratings": null,
+    "Time": "Prep: 10 minutes | Cook: 10 minutes | Total: 20 minutes",
+    "Ingredients": [
+      "3 tablespoons oil",
+      "3 holland chilies (thinly sliced)",
+      "1-2 Thai bird\u0027s eye chilies (optional, thinly sliced)",
+      "3 shallots (thinly sliced)",
+      "5 cloves garlic (sliced)",
+      "1 package seitan/vegan chicken (227g, chopped into small bits)",
+      "1 teaspoon sugar",
+      "2 teaspoons light soy sauce",
+      "1/2 teaspoon dark soy sauce",
+      "1 tablespoon fish sauce",
+      "2-3 tablespoons water",
+      "1 bunch holy or Thai Basil leaves (de-stemmed, washed)",
+      "juice of half a lime (optional)"
+    ],
+    "Instructions": [
+      "In a wok over high heat, add the oil, chilies, shallots and garlic, and fry for 1-2 minutes. Add the vegan chicken, and stir-fry for 30 seconds, spreading evenly in a single layer. Then let the vegan chicken brown, stirring occasionally to sear it evenly.",
+      "Add the sugar, light soy sauce (add half the amount if using fish sauce), and dark soy sauce. At this point, add the fish sauce if you are pescatarian/flexitarian.",
+      "Stir-fry for another minute, and deglaze the pan with water. Because your pan is over high heat, the liquid should cook off very quickly.",
+      "Add the basil, and stir-fry until wilted. Finish with fresh lime juice (optional, but a good opportunity for extra tang and flavor, especially for those omitting the fish sauce!). Serve over steamed rice!"
+    ],
+    "Comments": null
+  },
+  {
+    "Id": "chinese-cucumber-salad",
+    "Category": "Side",
+    "Maker": "@woksoflife",
+    "img": "/images/chineseCucumberSalad/chinese-garlic-cucumber-salad-6.jpg",
+    "Url": "https://thewoksoflife.com/chinese-cucumber-salad/",
+    "Title": "Chinese Cucumber Salad",
+    "Description": "This refreshing, crunchy dish is not only healthy, but a great option for BBQs and warmer weather.",
+    "Ratings": null,
+    "Time": "Prep: 25 minutes | Cook: 5 minutes | Total: 30 minutes",
+    "Ingredients": [
+      "6 cloves garlic (minced finely)",
+      "3 tablespoons oil",
+      "2 English cucumbers",
+      "1 1/2 teaspoons salt or salt to taste",
+      "1 teaspoon sugar",
+      "1/8 teaspoon MSG (optional)",
+      "1/4 teaspoon sesame oil",
+      "1 tablespoon rice vinegar"
+    ],
+    "Instructions": [
+      "First prepare the garlic. When you\u2019ve minced all of the garlic, set aside the equivalent of 1 clove.",
+      "Mix the oil and the rest of the garlic together, and set over medium-heat in a saucepan. Cook lightly for 2-3 minutes. Some foam will appear as the water in the garlic escapes. Do not let the garlic brown! This process takes about 2 minutes. Remove from the heat and let cool.",
+      "Chop the cucumbers into quarters lengthwise and then into \u00BD-inch chunks. Transfer to a bowl. Add the garlic oil, salt, sugar, pinch of MSG if using, sesame oil, and rice vinegar. Finally, add the reserved minced raw garlic. Stir thoroughly to coat everything.",
+      "For the best results, let sit for at least 20 minutes in the refrigerator to let the flavors meld."
+    ],
+    "Comments": null
+  },
+  {
+    "Id": "mango-pudding",
+    "Category": "Dessert",
+    "Maker": "woksoflife",
+    "img": "/images/mangoPudding/mango-pudding-4-650x813.jpg",
+    "Url": "https://thewoksoflife.com/mango-pudding/",
+    "Title": "Mango Pudding",
+    "Description": "Don\u0027t be fooled by this 5-ingredient dessert. It\u0027s full of mango flavor.",
+    "Ratings": null,
+    "Time": "Prep: 10 minutes | Cook: 20 minutes | Total: 30 minutes",
+    "Ingredients": [
+      "1 2/3 cups peeled, pitted, and cubed fresh, very ripe mango",
+      "2 tablespoons powdered gelatin",
+      "2 cups water (divided)",
+      "3 tablespoons sugar",
+      "1 tablespoon sweetened condensed milk"
+    ],
+    "Instructions": [
+      "Cube your mango and measure it into your food processor or blender. If you have any left over, save it for topping the mango puddings. Blend the mango cubes until completely smooth. Scrape down the sides of the blender or food processor bowl to ensure it all gets into the mixture, then run the food processor again if necessary!",
+      "If your mango is fibrous, use a rubber spatula to press it through a sieve into a large bowl to remove fibers. (If you have a ripe fresh mango, you shouldn\u2019t have to do this.) You should end up with at least 1 cup of mango puree.",
+      "In a small bowl or measuring cup, add a quarter of the water. Stir in the gelatin. After a few minutes, the gelatin powder will \u201Cbloom,\u201D absorbing the water and swelling in size until it\u2019s the consistency of very thick applesauce. Set aside.",
+      "In a small pot over medium-low heat, dissolve the sugar in the remaining water. It should be just hot enough to dissolve the sugar, but not so hot that it begins to simmer. Add the bloomed gelatin and stir until it\u2019s completely dissolved. Remove from the heat, and cool for 5 minutes.",
+      "In a mixing bowl, combine the sugar/water/gelatin mixture, mango puree, and condensed milk. Whisk gently until the mixture is uniform (whisking too fast or vigorously will result in air bubbles). In total, you will have about 3 cups of liquid.",
+      "Lightly brush a 9-inch glass pie pan or an 8-inch or 9-inch square pan (or another mold of choice) with a very thin layer of neutral oil. Pour the mixture into the pan and tap the pan on a towel laid out on your counter to surface any air bubbles. Alternatively, you can pour the mixture through a sieve into the pan to remove air bubbles.",
+      "Chill (no need to cover) for at least 4 hours, or until completely set. Slice into squares and top with additional cubed mango if desired. Serve!"
+    ],
+    "Comments": null
+  },
+  {
+    "Id": "yogurt-parfait",
+    "Category": "Snack",
+    "Maker": "simplysissom",
+    "img": "/images/yogurtParfait/horizontalparfaityogurt-copy.jpg",
+    "Url": "https://www.simplysissom.com/simpleyogurtparfaits/",
+    "Title": "Yogurt Parfait",
+    "Description": "A quick on-the-go snack that everyone enjoys. It can be easily customized to your liking.",
+    "Ratings": null,
+    "Time": "Prep: 5 minutes | Cook: 0 minutes | Total: 13 minutes",
+    "Ingredients": [
+      "32 oz. container whole milk plain yogurt, organic recommended",
+      "3 tablespoons honey",
+      "1 pound fresh or frozen berries",
+      "2 cups granola"
+    ],
+    "Instructions": [
+      "Add honey to the container of yogurt. Stir well.",
+      "In a mason jar, layer yogurt and berries. Top with granola."
+    ],
+    "Comments": null
+  },
+  {
+    "Id": "Atta Halwa",
+    "Category": "Dessert",
+    "Maker": "Spice Cravings",
+    "img": "/images/Attahalwa/Atte-ka-halwa-5.jpg",
+    "Url": "https://spicecravings.com/kada-prasad-atta-halwa",
+    "Title": "Atta Halwa",
+    "Description": "Make your mouth sweet when you hear a good news! in Desi style...",
+    "Ratings": [
+      5,
+      5,
+      3,
+      2,
+      1,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "Time": "Prep: 2 minutes | Cook: 8 minutes | Total: 10 minutes",
+    "Ingredients": [
+      "1/2 cup wheat flour",
+      "6 tbsp ghee",
+      "6 tbsp sugar",
+      "1/2 tsp cardamom",
+      "2 tbsp Almonds and pistachios"
+    ],
+    "Instructions": [
+      "Make sugar syrup with water.",
+      "Melt ghee in a non-stick wok on medium hear , stir in flour.",
+      "Stir and cook for 5-6 mins, until flour mix turns caramel in color.",
+      "Add sugar syrup prepared to the caramel prepared.",
+      "Switch to a wire whisk and stir continuosly until the water is fully absorbed and lump-free.",
+      "Turn off heat and garnish with desired nuts and serve."
+    ],
+    "Comments": null
+  },
+  {
+    "Id": "Bell Pepper Masala",
+    "Category": "Side",
+    "Maker": "Tarladalal",
+    "img": "/images/Bellpeppermasala/indian-corn-bell-pepper-stir-fry-masala.jpg",
+    "Url": "https://www.tarladalal.com/corn-capsicum-masala-healthy-corn-capsicum-curry-6407r",
+    "Title": "Bell Pepper Masala",
+    "Description": "Easy but yummy with masala spice , finger licking!",
+    "Ratings": [
+      5,
+      5,
+      3,
+      2,
+      1,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "Time": "Prep: 10 minutes | Cook: 15 minutes | Total: 25 minutes",
+    "Ingredients": [
+      "TBSP - tablespoon , TSP - teaspoon",
+      "1 tsp sugar",
+      "salt as per taste",
+      "1/ tsp dried fengureek leaves",
+      "1/4 tsp turmeric Powder",
+      "1 tsp ginger-garlic paste",
+      "1 tsp chili powder",
+      "2 tbsp oil",
+      "1 1/2 cups fresh tomato pulp",
+      "1/2 cup finely chopped onions",
+      "1 1/2 cups boiled sweet corn kernels",
+      "1 cup chopped colored bellpepper cubes",
+      "1 tsp Garam masala"
+    ],
+    "Instructions": [
+      "First of all boil sweet corn kernels with water and strain them.",
+      "Heat oil in a pan.",
+      "Add finely chopped onions,saute 2 mins.",
+      "Add bellpepper chopped once,medium flame saute 2 more mins.",
+      "Add giner garlic paste, add turmetic powder, chilli powder, garammasala, cook 2 mins.",
+      "Add tomato pulp,dried fenugreek leaves,cook for 3-4 mins.",
+      "Add corn,sugar,salt, cook 2-3 mins.",
+      "Garnish and serve!"
+    ],
+    "Comments": null
+  },
+  {
+    "Id": "Carrot Fudge",
+    "Category": "Dessert",
+    "Maker": "SpiceCravings",
+    "img": "/images/Carrotbarfi/carrot-burfi-recipe-1.webp",
+    "Url": "https://spicecravings.com/carrot-burfi-gajar-ki-burfi-instant-pot-carrot-fudge",
+    "Title": "Carrot Fudge",
+    "Description": "Rich in Vitamin A, carrot fudge Indian style!",
+    "Ratings": [
+      5,
+      5,
+      3,
+      2,
+      1,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "Time": "Prep: 10 minutes | Cook: 15 minutes | Total: 35 minutes",
+    "Ingredients": [
+      "4 cup carrots",
+      "3 tbsp ghee , 3/4 cup milk pasteurizied",
+      "1/2 cup milk powder",
+      "1/2 cup super-fine almond flour",
+      "1/2 cup sugar",
+      "flavorings",
+      "1/4 cup nuts"
+    ],
+    "Instructions": [
+      "Add ghee to the pan.",
+      "Add chopped Nuts ,carrots and saute for 2-3 mins.",
+      "Add milk and sugar , stir well.",
+      "Now add all this into a pressure cooker and make sure everything is okay and close the lid.",
+      "Pressure cook for 5 mins.",
+      "Saute, add milk powder and almond flour and stir.",
+      "Keep stirring for 8mins ,add cardamom powder and stir, transfer carrot fudge to a parchment lined loaf pan.",
+      "Spread it and pour toppings and let it cool and cut it into desired shapes."
+    ],
+    "Comments": null
+  },
+  {
+    "Id": "Sprouted Matki Poha",
+    "Category": "Main",
+    "Maker": "Tarladalal",
+    "img": "/images/Sproutedmatkipoha/big_sprouted_matki_poha-14693.jpg",
+    "Url": "https://archive.siasat.com/news/sprouted-matki-poha-661337/",
+    "Title": "Sprouted Matki Poha",
+    "Description": "The best main for Breakfast/lunch/dinner! Very healthy!",
+    "Ratings": [
+      5,
+      5,
+      3,
+      2,
+      1,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "Time": "Prep: 10 minutes | Cook: 10 minutes | Total: 20 minutes",
+    "Ingredients": [
+      "1 cup sprouted moath beans",
+      "1 cup cooked long-grained rice",
+      "1 tbsp oil",
+      "2 cloves",
+      "2 cardamoms",
+      "1 small stick cinnamon",
+      "1/4 tsp asafoetida",
+      "1 tsp finely chopped green chilies, 1/2 cup finely chopped onions ",
+      "/2 cup finely chopped bell pepper",
+      "1/4 tsp turmeric powder",
+      "1/2 tsp chili powder",
+      "1 tsp coriander powder "
+    ],
+    "Instructions": [
+      "Heat oil in a non-stickpan, add cloves, cinnamon, cardamom and asafoetida and saute on medium flame.",
+      "Add green chilies, ginger, bellpepper and onions and saute for 2-3 mins.",
+      "Add turmeric powder, chili powder, coriander poweder and saute on medium flame.",
+      "Add sprouted moath beans, salt and 1/4 cup water and cover the lid and cook on medium flame for 7 mins.",
+      "Add rice, toss gently and cook on a medium flame for 2 mins , stir occasionally.",
+      "Serve hot garnished with coriander."
+    ],
+    "Comments": null
+  },
+  {
+    "Id": "Tomato Pulav",
+    "Category": "Main",
+    "Maker": "Tarladalal",
+    "img": "/images/Tomatopulav/Tomato_pulav.jpg",
+    "Url": "https://www.tarladalal.com/restaurant-style-tomato-pulao-42578r",
+    "Title": "Tomato Pulav",
+    "Description": "The quick and tummy filling main course tasts the best!",
+    "Ratings": [
+      5,
+      5,
+      3,
+      2,
+      1,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "Time": "Prep: 20 minutes | Cook: 10 minutes | Total:30 minutes",
+    "Ingredients": [
+      "1 cup tomato cubes",
+      "1/2 cup fresh tomato pulp",
+      "2 cups chopped onions",
+      "1 tsp finely chopped ginger,2 tsp finely chopped garlic , 1 cup bell pepper",
+      "1/2 cup boiled green peas",
+      "1 1/2 tsp chili powder",
+      "1 tsp coriander powder",
+      "1/4 tsp turmeric powder",
+      "salt as required",
+      "1/2 tsp lemon juice"
+    ],
+    "Instructions": [
+      "Heat oil in a pan, add the cumin seeds and saute on a medium flame for 30 seconds.",
+      "Add onions, gingers and garlic and saute on a medium flame for 2 mins.",
+      "Add bellpepper and saute on medium flame.",
+      "Add the tomato cubes, green peas, mix well and cook.",
+      "Add the tomato pulp, chili powder and salt.",
+      "Add the rice, corriander and lemon juice, mix well and cook on a medium flame and serve!"
+    ],
+    "Comments": null
+  }
+]
